@@ -1,0 +1,32 @@
+﻿[
+  {
+    "title": "Dreamy Synthwave",
+    "artist": "A. Rivera",
+    "cover": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+  },
+  {
+    "title": "Lofi Coding",
+    "artist": "N. Hart",
+    "cover": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+  },
+  {
+    "title": "Neon Drive",
+    "artist": "S. Quinn",
+    "cover": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+  },
+  {
+    "title": "Late Night Focus",
+    "artist": "M. Rho",
+    "cover": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+  },
+  {
+    "title": "Pixel Sunset",
+    "artist": "K. Vale",
+    "cover": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+  }
+]

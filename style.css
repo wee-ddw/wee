@@ -17,6 +17,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text);
   background:
@@ -109,7 +110,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.7rem);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
   line-height: 1.15;
   max-width: 14ch;
 }
@@ -185,12 +186,13 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
   margin-bottom: 1rem;
 }
 
 .section-intro {
   color: var(--muted);
+  font-size: 0.92rem;
   margin-bottom: 1.5rem;
 }
 
@@ -213,6 +215,7 @@ h2 {
 
 .card p {
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .pricing-wrap {
@@ -264,18 +267,18 @@ h2 {
 
 .calc-label {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .calc-total {
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
   font-weight: 700;
   color: var(--accent-2);
 }
 
 .calc-detail {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .gallery-grid {
@@ -288,11 +291,23 @@ h2 {
   background: linear-gradient(160deg, #122111, #182c16);
   border: 1px dashed #3a642f;
   border-radius: 0.9rem;
-  min-height: 180px;
+  width: 100px;
+  height: 100px;
   display: grid;
   place-items: center;
   color: #a8c897;
   font-weight: 600;
+  font-size: 0.72rem;
+  margin-inline: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
 }
 
 .quote-box {

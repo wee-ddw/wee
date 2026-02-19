@@ -9,6 +9,43 @@
   --border: #253049;
 }
 
+/* Light theme variables (applies when [data-theme="light"] on <html>) */
+[data-theme="light"] {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-2: #f3f6fa;
+  --text: #071425;
+  --muted: #52606a;
+  --accent: #0b78d1;
+  --accent-2: #00b37a;
+  --border: #d7e2ee;
+}
+
+html {
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+.theme-toggle {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.05rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

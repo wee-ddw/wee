@@ -51,3 +51,26 @@ if (gramsInput && rateInput) {
   rateInput.addEventListener("input", schedulePriceUpdate);
   updatePrice();
 }
+
+function attachButtonEffects(button) {
+  button.addEventListener("pointerdown", () => {
+    button.classList.add("is-pressed");
+  });
+
+  const release = () => button.classList.remove("is-pressed");
+  button.addEventListener("pointerup", release);
+  button.addEventListener("pointerleave", release);
+  button.addEventListener("blur", release);
+
+  button.addEventListener("click", (event) => {
+    const rect = button.getBoundingClientRect();
+    const ripple = document.createElement("span");
+    ripple.className = "btn-ripple";
+    ripple.style.left = `${event.clientX - rect.left}px`;
+    ripple.style.top = `${event.clientY - rect.top}px`;
+    button.appendChild(ripple);
+    ripple.addEventListener("animationend", () => ripple.remove(), { once: true });
+  });
+}
+
+document.querySelectorAll(".btn, .nav-link").forEach(attachButtonEffects);

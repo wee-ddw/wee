@@ -51,6 +51,30 @@
       </div>
     </section>
 
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <h2>Print Pricing Calculator</h2>
+        <p class="section-intro">Quick estimate based on filament use. Example: 20g x 3 pesos = 60 pesos.</p>
+        <div class="pricing-wrap">
+          <div class="pricing-grid">
+            <label for="gramsUsed" class="field">
+              <span>Filament Used (grams)</span>
+              <input id="gramsUsed" type="number" min="0" step="0.1" value="20" inputmode="decimal">
+            </label>
+            <label for="pricePerGram" class="field">
+              <span>Price Per Gram (pesos)</span>
+              <input id="pricePerGram" type="number" min="0" step="0.1" value="3" inputmode="decimal">
+            </label>
+          </div>
+          <div class="calc-result" aria-live="polite">
+            <p class="calc-label">Estimated Price</p>
+            <p class="calc-total" id="totalPrice">PHP 60.00</p>
+            <p class="calc-detail" id="calcDetail">20g x PHP 3.00/g</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="gallery section" id="gallery">
       <div class="container">
         <h2>Gallery</h2>

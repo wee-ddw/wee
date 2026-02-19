@@ -1,50 +1,53 @@
 const yearEl = document.getElementById("year");
+const gramsInput = document.getElementById("gramsUsed");
+const rateInput = document.getElementById("pricePerGram");
+const totalPriceEl = document.getElementById("totalPrice");
+const calcDetailEl = document.getElementById("calcDetail");
 
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// Theme toggle: supports light and dark themes with persistence
-const themeToggle = document.getElementById("theme-toggle");
+const pesoFormatter = new Intl.NumberFormat("en-PH", {
+  style: "currency",
+  currency: "PHP",
+  minimumFractionDigits: 2,
+});
 
-function getStoredTheme() {
-  return localStorage.getItem('theme');
+function toNonNegativeNumber(value) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
 }
 
-function storeTheme(theme) {
-  localStorage.setItem('theme', theme);
-}
-
-function applyTheme(theme) {
-  if (theme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.removeAttribute('data-theme');
+function updatePrice() {
+  if (!gramsInput || !rateInput || !totalPriceEl || !calcDetailEl) {
+    return;
   }
-  updateToggleIcon(theme);
+
+  const grams = toNonNegativeNumber(gramsInput.value);
+  const rate = toNonNegativeNumber(rateInput.value);
+  const total = grams * rate;
+
+  totalPriceEl.textContent = pesoFormatter.format(total);
+  calcDetailEl.textContent = `${grams}g x ${pesoFormatter.format(rate)}/g`;
 }
 
-function updateToggleIcon(theme) {
-  if (!themeToggle) return;
-  themeToggle.textContent = theme === 'light' ? '☀️' : '🌙';
-}
+let frameRequested = false;
 
-function detectPreferredTheme() {
-  const stored = getStoredTheme();
-  if (stored) return stored;
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-}
+function schedulePriceUpdate() {
+  if (frameRequested) {
+    return;
+  }
 
-(function initTheme() {
-  const theme = detectPreferredTheme();
-  applyTheme(theme);
-})();
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-    const next = current === 'light' ? 'dark' : 'light';
-    applyTheme(next);
-    storeTheme(next);
+  frameRequested = true;
+  requestAnimationFrame(() => {
+    updatePrice();
+    frameRequested = false;
   });
+}
+
+if (gramsInput && rateInput) {
+  gramsInput.addEventListener("input", schedulePriceUpdate);
+  rateInput.addEventListener("input", schedulePriceUpdate);
+  updatePrice();
 }

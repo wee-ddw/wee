@@ -28,5 +28,35 @@
     "artist": "K. Vale",
     "cover": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&auto=format&fit=crop",
     "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+  },
+  {
+    "title": "Retro Skyline",
+    "artist": "J. Monroe",
+    "cover": "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+  },
+  {
+    "title": "Code and Coffee",
+    "artist": "E. Dawson",
+    "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+  },
+  {
+    "title": "Midnight Transit",
+    "artist": "L. Ortega",
+    "cover": "https://images.unsplash.com/photo-1461784180009-21121b2f204c?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+  },
+  {
+    "title": "Warm Static",
+    "artist": "P. Kline",
+    "cover": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+  },
+  {
+    "title": "Night Shift",
+    "artist": "R. Nolan",
+    "cover": "https://images.unsplash.com/photo-1499415479124-43c32433a620?w=500&auto=format&fit=crop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
   }
 ]
